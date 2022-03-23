@@ -1,0 +1,12 @@
+{
+    "Version":"2012-10-17",
+    "Statement": [
+    {
+        "Effect": "Allow",
+        "Principal": {
+            "AWS": "arn:aws:iam::614129417617:user/devin"
+        },
+        "Action": "s3:ListBucket",
+        "Resource": "arn:aws:s3:us-east-1:758373647921:accesspoint/djl-first-s3ap"
+    }]
+}

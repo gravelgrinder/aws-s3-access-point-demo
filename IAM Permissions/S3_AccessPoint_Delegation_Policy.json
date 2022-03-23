@@ -1,0 +1,24 @@
+{
+    "Version": "2012-10-17",
+    "Statement" : [
+    {
+        "Sid": "ApDelegatedAccessOwner",
+        "Effect": "Allow",
+        "Principal" : { "AWS": "*" },
+        "Action" : "*",
+        "Resource" : [ "arn:aws:s3:::djl-test-bucket-01", "arn:aws:s3:::djl-test-bucket-01/*"],
+        "Condition": {
+            "StringEquals" : { "s3:DataAccessPointAccount" : "614129417617" }
+        }
+    },
+    {
+        "Sid": "ApDelegatedAccessAwsomeBuilderAcct",
+        "Effect": "Allow",
+        "Principal" : { "AWS": "*" },
+        "Action" : "*",
+        "Resource" : [ "arn:aws:s3:::djl-test-bucket-01", "arn:aws:s3:::djl-test-bucket-01/*"],
+        "Condition": {
+            "StringEquals" : { "s3:DataAccessPointAccount" : "758373647921" }
+        }
+    }]
+}
